@@ -1,11 +1,11 @@
 # Science Immersion Day
 
 # Before you start
-You have been assigned (probably via email) some unique codes that will distinguish you from the other students in the class. When you see a marker like <nn> or <emrIP> in the instructions, replace them with the code values you've been assigned. Here are the codes you'll need for the full course:
+You have been assigned (probably via email) some unique codes that will distinguish you from the other students in the class. When you see a marker like {nn} or {emrIP} in the instructions, replace them with the code values you've been assigned. Here are the codes you'll need for the full course:
 
-* <nn>
-* <emrIP>
-* <coursePassword>
+* {nn}
+* {emrIP}
+* {coursePassword}
 ***
 
 
@@ -13,8 +13,8 @@ You have been assigned (probably via email) some unique codes that will distingu
 
 Student Login:
 * URL: https://607117263726.signin.aws.amazon.com/console
-* Username: ecolab<nn>
-* Password: <coursePassword>
+* Username: ecolab{nn}
+* Password: {coursePassword}
 ***
 
 ## Module 1.1: Inference
@@ -22,7 +22,7 @@ Student Login:
 Find your Jupyter notebook instance:
 * Services: `SageMaker`
 * Select: `Notebook Instances` from Sidebar
-* Click: `ecolab-nb<nn>`
+* Click: `ecolab-nb{nn}`
 * Then: `Open`
 * Expect: Jupyter Notebook home page.
 ***
@@ -58,8 +58,8 @@ Walkthrough: Training process, model creation and inference endpoint.
 
 Student Login:
 * URL: https://appstream2.ap-southeast-2.aws.amazon.com/userpools#/signin?ref=WHoMsegfU9
-* Username: craigar+ecolab<nn>@amazon.com
-* Password: <coursePassword>
+* Username: craigar+ecolab{nn}@amazon.com
+* Password: {coursePassword}
 * Expect: AppStream Dashboard
 ***
 
@@ -67,7 +67,7 @@ Student Login:
 
 * Click: Firefox
 * Click: Firefox +tab or New Tab
-* URL: http://10.0.<emrIP>:8787
+* URL: http://10.0.{emrIP}:8787
 ***
 
 ```
@@ -92,7 +92,7 @@ To paste into AppStream from physical device clipboard:
 * Student Login:
 * URL: https://appstream2.ap-southeast-2.aws.amazon.com/userpools#/signin?ref=WHoMsegfU9
 * Username: craigar+ecolab00@amazon.com
-* Password: <coursePassword>
+* Password: {coursePassword}
 ***
 
 * Expect: AppStream Dashboard
