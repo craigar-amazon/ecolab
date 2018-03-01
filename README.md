@@ -52,6 +52,7 @@ Find the Jupyter notebook instance used to train the model:
 ***
 
 Walkthrough: Training process, model creation and inference endpoint.
+***
 
 
 # Module 2: Statistical Analysis
@@ -158,6 +159,8 @@ cp -r $FOAM_TUTORIALS/incompressible/icoFoam/cavity/cavity $HOME/.
 Further experimentation:
 http://docs.alces-flight.com/en/stable/getting-started/environment-usage/using-openfoam-with-alces-flight-compute.html
 
+***
+***
 
 # Software
 
