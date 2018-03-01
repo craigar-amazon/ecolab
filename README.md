@@ -1,43 +1,55 @@
 # Science Immersion Day
 
+# Before you start
+You have been assigned (probably via email) some unique codes that will distinguish you from the other students in the class. When you see a marker like <nn> or <emrIP> in the instructions, replace them with the code values you've been assigned. Here are the codes you'll need for the full course:
+
+* <nn>
+* <emrIP>
+* <coursePassword>
+***
+
+
 # Module 1: Machine Learning
 
 Student Login:
-URL: https://607117263726.signin.aws.amazon.com/console
-Username: ecolab<nn>
-Password: <coursePassword>
+* URL: https://607117263726.signin.aws.amazon.com/console
+* Username: ecolab<nn>
+* Password: <coursePassword>
+***
 
 ## Module 1.1: Inference
-Services: `SageMaker`
-Select: `Notebook Instances` from Sidebar
 
-Click: `ecolab-nb<nn>`
-Then: `Open`
+Find your Jupyter notebook instance:
+* Services: `SageMaker`
+* Select: `Notebook Instances` from Sidebar
+* Click: `ecolab-nb<nn>`
+* Then: `Open`
+* Expect: Jupyter Notebook home page.
+***
 
-Expect: Jupyter Notebook home page.
-Click: `Files` tab
-Click: `New` button.
-Select: `conda_python3`
-
-Paste: *imageClassify.py* CELL1 from Software section (below)
-Click `>|` (run cell) button on toolbar
-Expect: Lovely Swan Pic
-
-Paste *imageClassify.py* CELL2 from Software section (below)
-Click `>|` (run cell) button on toolbar
-Expect: probability of swan
+Write your image classification program:
+* Click: `Files` tab
+* Click: `New` button.
+* Select: `conda_python3`
+* Paste: *imageClassify.py* CELL1 from Software section (below)
+* Click `>|` (run cell) button on toolbar
+* Expect: A lovely swan pic
+* Paste *imageClassify.py* CELL2 from Software section (below)
+* Click `>|` (run cell) button on toolbar
+* Expect: probability of swan
+***
 
 ## Module 1.2: Training
-Services: `Sagemaker` - or click on SageMaker browser tab.
-Select: `Notebook Instances` from Sidebar
 
-Click: `ecolab-nb00`
-Then: `Open`
-
-Expect: Jupyter Notebook home page.
-Click: `Running` tab
-
-Click: `sample-notebooks/introduction_to_amazon_algorithms/imageclassification_caltech/Image-classification-transfer-learning.ipynb`
+Find the Jupyter notebook instance used to train the model:
+* Services: `Sagemaker` - or click on SageMaker browser tab.
+* Select: `Notebook Instances` from Sidebar
+* Click: `ecolab-nb00`
+* Then: `Open`
+* Expect: Jupyter Notebook home page.
+* Click: `Running` tab
+* Click: `sample-notebooks/introduction_to_amazon_algorithms/imageclassification_caltech/Image-classification-transfer-learning.ipynb`
+***
 
 Walkthrough: Training process, model creation and inference endpoint.
 
@@ -45,17 +57,18 @@ Walkthrough: Training process, model creation and inference endpoint.
 # Module 2: Statistical Analysis
 
 Student Login:
-URL: https://appstream2.ap-southeast-2.aws.amazon.com/userpools#/signin?ref=WHoMsegfU9
-Username: craigar+ecolab<nn>@amazon.com
-Password: T0ng@riro
-
-Expect: AppStream Dashboard
+* URL: https://appstream2.ap-southeast-2.aws.amazon.com/userpools#/signin?ref=WHoMsegfU9
+* Username: craigar+ecolab<nn>@amazon.com
+* Password: <coursePassword>
+* Expect: AppStream Dashboard
+***
 
 ## Module 2.1 RStudio
 
-Click: Firefox
-Click: Firefox +tab or New Tab
-URL: http://10.0.0.254:8787
+* Click: Firefox
+* Click: Firefox +tab or New Tab
+* URL: http://10.0.<emrIP>:8787
+***
 
 ```
 To paste into AppStream from physical device clipboard:
@@ -65,79 +78,82 @@ To paste into AppStream from physical device clipboard:
 4. Select target field for paste in AppStream application
 5. Click Ctrl-V (Windows paste)
 ```
-Expect: RStudio Login appears
-Username: hadoop
-Password: hadoop
-
-Expect: RStudio IDE
-Click: New R Script on toolbar or under File menu
-
+* Expect: RStudio Login appears
+* Username: hadoop
+* Password: hadoop
+* Expect: RStudio IDE
+* Click: New R Script on toolbar or under File menu
+***
 
 # Module 3: Cluster Computing
 
 ## Module 3.1: OpenFOAM
 
-Student Login:
-URL: https://appstream2.ap-southeast-2.aws.amazon.com/userpools#/signin?ref=WHoMsegfU9
-Username: craigar+ecolab00@amazon.com
-Password: T0ng@riro
+* Student Login:
+* URL: https://appstream2.ap-southeast-2.aws.amazon.com/userpools#/signin?ref=WHoMsegfU9
+* Username: craigar+ecolab00@amazon.com
+* Password: <coursePassword>
+***
 
-Expect: AppStream Dashboard
-Click: PuTTY
+* Expect: AppStream Dashboard
+* Click: PuTTY
+* Click: MyFiles icon in AppStream toolbar
+* Select: Home Folder
+* Click: Upload Files
+* Select: EcoLabSYD.ppk
+* Host Name: 10.75.128.15
+* SSH / Auth: EcoLabSYD.ppk
+* Expect: Alces Welcome
+***
 
-Click: MyFiles icon in AppStream toolbar
-Select: Home Folder
-Click: Upload Files
-Select: EcoLabSYD.ppk
+* Command: `alces gridware list`
+* Expect: List includes apps/openfoam/4.1 (or later)
+* If not already installed:
+  * Command: `alces gridware install apps/openfoam/4.1`
+  ***
+***
 
-Host Name: 10.75.128.15
-Auth: EcoLabSYD.ppk
+* Command: `alces session start gnome`
+* Read: [vncport] and [vncpassword]
+* Tip: Highlight vncpassword to save to clipboard
+***
 
-Expect: Alces Welcome
-Command: `alces gridware list`
-Expect: List includes apps/openfoam/4.<x>
+* Click: Applications icon in AppStream toolbar
+* Select: VNC
+* URL: 10.75.128.15:[vncport]
+* Password: [vncpassword]
+* Tip: right-mouse-click then paste
+* Expect: Gnome Desktop
+***
 
-If not already installed:
-Command: `alces gridware install apps/openfoam/4.1` assuming <x> is 1
-
-Command: `alces session start gnome`
-Read: <vncport> and <vncpassword>
-Tip: Highlight vncpassword to save to clipboard
-
-Click: Applications icon in AppStream toolbar
-Select: VNC
-URL: 10.75.128.15:<vncport>
-Password: <vncpassword>
-Tip: right-mouse-click then paste
-
-Expect: Gnome Desktop
-Select: Applications | Terminal
-Command: `module load apps/openfoam`
-Commands: If cavity tutorial not already prepared
+* Select: Applications | Terminal
+* Command: `module load apps/openfoam`
+* Commands: Run if cavity tutorial not already prepared
+***
 ```bash
 cd $FOAM_TUTORIALS
 ls
 cp -r $FOAM_TUTORIALS/incompressible/icoFoam/cavity/cavity $HOME/.
 ```
 
-Command: `cd ~\cavity`
-Command: `blockMesh`
-Expect: creating block mesh...patches...end
-Command: `checkMesh`
-Expect: Checking geometry... mesh ok
-Command: `icoFoam`
-Expect: solver information..end
-Command: `paraFoam`
-Expect: ParaView main window
-Navigation:
-* Mesh Parts - tick All - then Apply
-* Choose U + Magnitude + Surface
-* Time: advance to 5
+* Command: `cd ~\cavity`
+* Command: `blockMesh`
+* Expect: creating block mesh...patches...end
+* Command: `checkMesh`
+* Expect: Checking geometry... mesh ok
+* Command: `icoFoam`
+* Expect: solver information..end
+* Command: `paraFoam`
+* Expect: ParaView main window
+* Navigation:
+  * Mesh Parts - tick All - then Apply
+  * Choose U + Magnitude + Surface
+  * Time: advance to 5
+  ***
+***
 
 Further experimentation:
 http://docs.alces-flight.com/en/stable/getting-started/environment-usage/using-openfoam-with-alces-flight-compute.html
-
-
 
 
 # Software
