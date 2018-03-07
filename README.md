@@ -1,18 +1,30 @@
 # Science Immersion Day
 
-# Before you start
+# Agenda
+* A General Introduction to AWS (60m)
+* Introduction to Machine Learning on AWS (45m)
+* Lab Module 1: Machine Learning (60m)
+* Introduction to Big Data Analysis on AWS (45m)
+* Lab Module 2: Statistical Analysis (45m)
+* Introduction to High Performance Computing on AWS (30m)
+* Lab Module 3: Cluster Computing (30m)
+***
+
+# Lab Modules: Before you start
 You have been assigned (probably via email) some unique codes that will distinguish you from the other students in the class. When you see a marker like {nn} or {emrIP} in the instructions, replace them with the code values you've been assigned. Here are the codes you'll need for the full course:
 
 * {nn}
 * {emrIP}
 * {coursePassword}
+* {courseAccount}
+* {appStreamId}
 ***
 
 
-# Module 1: Machine Learning
+# Lab Module 1: Machine Learning
 
 Student Login:
-* URL: https://607117263726.signin.aws.amazon.com/console
+* URL: https://{courseAccount}.signin.aws.amazon.com/console
 * Username: ecolab{nn}
 * Password: {coursePassword}
 ***
@@ -55,10 +67,10 @@ Walkthrough: Training process, model creation and inference endpoint.
 ***
 
 
-# Module 2: Statistical Analysis
+# Lab Module 2: Statistical Analysis
 
 Student Login:
-* URL: https://appstream2.ap-southeast-2.aws.amazon.com/userpools#/signin?ref=WHoMsegfU9
+* URL: https://appstream2.ap-southeast-2.aws.amazon.com/userpools#/signin?ref={appStreamId}
 * Username: craigar+ecolab{nn}@amazon.com
 * Password: {coursePassword}
 * Expect: AppStream Dashboard
@@ -89,12 +101,12 @@ To paste into AppStream from physical device clipboard:
 * Expect: Graph of flight distance vs delay
 ***
 
-# Module 3: Cluster Computing
+# Lab Module 3: Cluster Computing
 
 ## Module 3.1: OpenFOAM
 
 * Student Login:
-* URL: https://appstream2.ap-southeast-2.aws.amazon.com/userpools#/signin?ref=WHoMsegfU9
+* URL: https://appstream2.ap-southeast-2.aws.amazon.com/userpools#/signin?ref={appStreamId}
 * Username: craigar+ecolab00@amazon.com
 * Password: {coursePassword}
 ***
@@ -188,6 +200,7 @@ import boto3
 import json
 import numpy as np
 
+# Instructor will provide endpoint name
 endpoint_name = "sagemaker-imageclassification-notebook-ep--2018-02-28-20-30-49"
 runtime = boto3.Session().client(service_name='runtime.sagemaker')
 
