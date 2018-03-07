@@ -32,6 +32,7 @@ Student Login:
 ## Module 1.1: Inference
 
 Find your Jupyter notebook instance:
+* Region: `Oregon (us-west-2)` - see top menu bar, right-hand side
 * Services: `SageMaker`
 * Select: `Notebook Instances` from Sidebar
 * Click: `ecolab-nb{nn}`
